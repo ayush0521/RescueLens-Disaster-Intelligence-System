@@ -76,7 +76,36 @@ Frontend Dashboard (React + Map)
 </ul>
 
 <hr>
+<h2>📁 Project Structure</h2>
 
+<pre>
+RescueLens/
+│
+├── backend/              # Flask backend API
+│   ├── app.py
+│   ├── routes/
+│   └── utils/
+│
+├── ml/                   # ML & scoring logic
+│   ├── model.py
+│   ├── scoring.py
+│   └── preprocessing.py
+│
+├── frontend/             # React frontend
+│   ├── src/
+│   └── public/
+│
+├── data/                 # Sample dataset
+│   └── sample_data.json
+│
+├── docs/                 # Documentation
+│   └── architecture.md
+│
+├── README.md
+├── requirements.txt
+└── LICENSE
+</pre>
+<hr>
 <h2>🚀 Features</h2>
 
 <ul>
