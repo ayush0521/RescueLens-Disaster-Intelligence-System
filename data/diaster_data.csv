@@ -1,0 +1,26 @@
+id,text,city,disaster_type,source,timestamp
+1,Massive flooding reported in Mumbai streets after heavy rain,Mumbai,Flood,news,2025-03-17 11:42
+2,"Fire broke out in a residential building in Pune, emergency teams rushed",Pune,Fire,reddit,2023-08-02 19:05
+3,"Earthquake tremors felt in Delhi, people rushed out of buildings",Delhi,Earthquake,facebook,2023-01-11 14:57
+4,Two vehicles collided on Pune highway causing heavy traffic,Pune,Accident,news,2025-12-29 06:18
+5,Waterlogging seen across chennai suburbs disrupting daily commute,Chennai,Flood,news,2025-09-08 22:31
+6,Sudden fire reported in a busy market area in Delhi causing panic,Delhi,Fire,reddit,2024-11-27 17:46
+7,Mild tremors felt in Chennai during afternoon hours,Chennai,Earthquake,X,2023-04-16 09:23
+8,Bus accident in Delhi city area leading to road blockage,Delhi,Accident,news,2025-06-03 13:08
+9,Heavy rainfall submerged roads in parts of Pune,Pune,Flood,reddit,2023-01-25 15:39
+10,Firefighters rushed to control warehouse fire in Chennai outskirts,Chennai,Fire,news,2024-05-09 08:14
+11,People reported shaking sensation across Mumbai neighborhoods,Mumbai,Earthquake,X,2025-07-21 20:55
+12,Multi-vehicle accident caused traffic congestion in Mumbai,Mumbai,Accident,reddit,2023-09-18 18:27
+13,Continuous rain worsened flooding in Pune low-lying areas,Pune,Flood,facebook,2023-12-14 05:36
+14,Smoke seen rising after fire broke out in Delhi building,Delhi,Fire,news,2025-11-30 10:49
+15,Offices evacuated in Pune after sudden tremors,Pune,Earthquake,reddit,2024-02-06 21:11
+16,Road accident on Mumbai bypass caused delays during evening rush,Mumbai,Accident,reddit,2025-03-23 19:44
+17,Water entered homes in Delhi after heavy overnight rainfall,Delhi,Flood,news,2025-08-19 16:58
+18,Fire contained in Chennai apartment with no injuries reported,Chennai,Fire,news,2024-06-28 12:07
+19,Low intensity tremors recorded again in Delhi,Delhi,Earthquake,X,2025-04-07 09:51
+20,Minor collision in Pune led to temporary traffic slowdown,Pune,Accident,reddit,2023-07-15 14:03
+21,Flood conditions affecting transport services in chennai suburbs,Chennai,Flood,facebook,2025-02-26 11:59
+22,Short circuit caused fire in a Delhi office building,Delhi,Fire,reddit,2024-01-30 23:16
+23,Earthquake activity reported near Chennai with mild impact,Chennai,Earthquake,facebook,2025-10-22 06:40
+24,Accident cleared by authorities on Mumbai highway restoring traffic,Mumbai,Accident,news,2024-09-05 17:25
+25,Severe waterlogging reported in Pune after continuous rainfall,Pune,Flood,news,2023-10-04 13:22
