@@ -1,5 +1,8 @@
 DISASTER_KEYWORDS = {
-    "flood": ["flood", "flooding", "flash flood", "river overflow", "heavy rain", "water damage"],
+    "flood": [
+    "flood", "flooding", "heavy rain", "rain", "water logging",
+    "river overflow", "inundation"
+],
     "fire": ["fire", "wildfire", "bushfire", "forest fire", "house fire", "building fire"],
     "earthquake": ["earthquake", "tremor", "seismic activity", "aftershock", "magnitude"],
     "accident": ["accident", "car crash", "traffic collision", "road accident", "vehicle collision"],
@@ -12,7 +15,7 @@ def detect_disaster(text: str):
         count = 0
 
         for word in keywords:
-            if word in text.split:
+            if word in text.split():
                 # optional improvement (negation handling)
                 if "no " + word in text:
                     continue
