@@ -11,6 +11,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+print("CORS LOADED SUCCESSFULLY")
 
 @app.get("/")
 def home():
