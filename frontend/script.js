@@ -1,52 +1,53 @@
-// ================= CONFIG =================
-const API_URL = "https://rescuelens-disaster-intelligence-system-1-lblq.onrender.com";
+// 🔥 CHANGE THIS ONLY IF YOUR BACKEND URL CHANGES
+const API_BASE = "https://rescuelens-disaster-intelligence-system-1-lblq.onrender.com";
 
-// ================= MAIN FUNCTION =================
+// Fetch alerts
 async function fetchAlerts() {
-  const alertsContainer = document.getElementById("alerts-container");
-
   try {
-    // Show loading state
-    alertsContainer.innerHTML = "⏳ Fetching live alerts...";
+    console.log("Fetching alerts...");
 
-    const response = await fetch(`${API_URL}/alerts`);
+    const response = await fetch(`${API_BASE}/alerts`);
 
-    // Check HTTP error
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    const data = await response.json();
+    const alerts = await response.json();
 
-    console.log("API DATA:", data);
+    console.log("Alerts received:", alerts);
 
-    // Ensure array
-    const alerts = Array.isArray(data) ? data : [];
-
-    // Render alerts
     renderAlerts(alerts);
+    updateStats(alerts);
 
   } catch (error) {
-    console.error("Fetch Error:", error);
+    console.error("Error fetching alerts:", error);
 
-    alertsContainer.innerHTML = `
-      ❌ Failed to load alerts <br/>
-      <small>${error.message}</small>
-    `;
+    document.getElementById("alerts-container").innerHTML =
+      "❌ Failed to load alerts";
   }
 }
 
-// ================= RENDER FUNCTION =================
+
+// Render alerts
 function renderAlerts(alerts) {
   const container = document.getElementById("alerts-container");
 
-  // Empty case
-  if (alerts.length === 0) {
-    container.innerHTML = "⚠️ No alerts found";
+  if (!container) {
+    console.error("alerts-container not found!");
     return;
   }
 
-  // Build UI
+  if (!Array.isArray(alerts)) {
+    console.error("Invalid data format:", alerts);
+    container.innerHTML = "❌ Invalid data from server";
+    return;
+  }
+
+  if (alerts.length === 0) {
+    container.innerHTML = "⚠️ No alerts available";
+    return;
+  }
+
   container.innerHTML = alerts.map(alert => `
     <div class="alert-card">
       <h3>🚨 ${alert.type.toUpperCase()}</h3>
@@ -56,8 +57,21 @@ function renderAlerts(alerts) {
   `).join("");
 }
 
-// ================= AUTO LOAD =================
+
+// Update stats
+function updateStats(alerts) {
+  document.getElementById("alert-count").innerText = alerts.length;
+
+  const cities = new Set(alerts.map(a => a.location));
+  document.getElementById("city-count").innerText = cities.size;
+
+  const highRisk = alerts.filter(a => a.severity === "high").length;
+  document.getElementById("high-risk").innerText = highRisk;
+}
+
+
+// Auto run
 fetchAlerts();
 
-// Optional: refresh every 10 sec (for real-time demo)
+// Optional: auto-refresh every 10 sec
 setInterval(fetchAlerts, 10000);
