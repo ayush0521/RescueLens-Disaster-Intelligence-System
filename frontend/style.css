@@ -129,3 +129,11 @@ body {
   background: #111;
   border-radius: 5px;
 }
+.alert-card {
+  background: #0f172a;
+  border: 1px solid #334155;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: white;
+}
