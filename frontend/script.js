@@ -44,7 +44,7 @@ async function fetchAlerts() {
   try {
     alertsList.innerHTML = "⏳ Fetching live alerts...";
 
-    const res = await fetch("http://171.171.8.2:8000/api/incidents");
+    const res = await fetch("https://rescuelens-disaster-intelligence-system-1-lblq.onrender.com");
     const data = await res.json();
 
     alerts = data.map((a) => {
