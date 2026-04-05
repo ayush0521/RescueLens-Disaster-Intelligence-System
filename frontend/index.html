@@ -1,38 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RescueLens</title>
-
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>🚨 RescueLens</h1>
-    <p>Real-Time Disaster Monitoring</p>
-  </header>
+<h1 style="text-align:center;">🚨 RescueLens</h1>
 
-  <main>
+<div id="alerts-container"></div>
 
-    <!-- LIVE STATS -->
-    <section class="stats">
-      <div>Alerts: <span id="alert-count">0</span></div>
-      <div>Cities: <span id="city-count">0</span></div>
-      <div>High Risk: <span id="high-risk">0</span></div>
-    </section>
+<script src="script.js"></script>
 
-    <!-- ALERTS -->
-    <section>
-      <h2>🚨 Alerts</h2>
-      <div id="alerts-container">
-        Loading alerts...
-      </div>
-    </section>
-
-  </main>
-
-  <script src="script.js"></script>
 </body>
 </html>
