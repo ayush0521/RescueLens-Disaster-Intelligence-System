@@ -1,29 +1,63 @@
-const API_URL = "https://rescue-lens-disaster-intelligence-system-1-lblq.onrender.com";
+// ================= CONFIG =================
+const API_URL = "https://rescuelens-disaster-intelligence-system-1-lblq.onrender.com";
 
+// ================= MAIN FUNCTION =================
 async function fetchAlerts() {
+  const alertsContainer = document.getElementById("alerts-container");
+
   try {
-    const res = await fetch(`${API_URL}/alerts`);
-    const data = await res.json();
+    // Show loading state
+    alertsContainer.innerHTML = "⏳ Fetching live alerts...";
 
-    console.log("DATA:", data);  // 👈 IMPORTANT DEBUG
+    const response = await fetch(`${API_URL}/alerts`);
 
-    displayAlerts(data);
+    // Check HTTP error
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    console.log("API DATA:", data);
+
+    // Ensure array
+    const alerts = Array.isArray(data) ? data : [];
+
+    // Render alerts
+    renderAlerts(alerts);
 
   } catch (error) {
-    console.error("ERROR:", error);
+    console.error("Fetch Error:", error);
+
+    alertsContainer.innerHTML = `
+      ❌ Failed to load alerts <br/>
+      <small>${error.message}</small>
+    `;
   }
 }
 
-function displayAlerts(data) {
-  const alertsContainer = document.getElementById("alerts");
+// ================= RENDER FUNCTION =================
+function renderAlerts(alerts) {
+  const container = document.getElementById("alerts-container");
 
-  alertsContainer.innerHTML = "";
+  // Empty case
+  if (alerts.length === 0) {
+    container.innerHTML = "⚠️ No alerts found";
+    return;
+  }
 
-  data.forEach(alert => {
-    const div = document.createElement("div");
-    div.innerHTML = `
-      <p><b>${alert.type}</b> - ${alert.location} (${alert.severity})</p>
-    `;
-    alertsContainer.appendChild(div);
-  });
+  // Build UI
+  container.innerHTML = alerts.map(alert => `
+    <div class="alert-card">
+      <h3>🚨 ${alert.type.toUpperCase()}</h3>
+      <p><strong>Location:</strong> ${alert.location}</p>
+      <p><strong>Severity:</strong> ${alert.severity}</p>
+    </div>
+  `).join("");
 }
+
+// ================= AUTO LOAD =================
+fetchAlerts();
+
+// Optional: refresh every 10 sec (for real-time demo)
+setInterval(fetchAlerts, 10000);
