@@ -1,25 +1,10 @@
 from fastapi import FastAPI
 from backend.routes import router
-app.include_router(router)
-from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(
-    title="RescueLens API",
-    version="1.0.0"
-)
-
-
-# ✅ CORS FIX
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # for hackathon demo
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-app.include_router(router)
+app = FastAPI()
 
 @app.get("/")
 def home():
-    return {"message": "RescueLens API running"}
+    return {"message": "API is running"}
+
+app.include_router(router)
