@@ -1,3 +1,4 @@
+console.log("NEW CLEAN SCRIPT LOADED");
 const API_BASE = "https://rescuelens-disaster-intelligence-system-1-lblq.onrender.com";
 
 async function fetchAlerts() {
