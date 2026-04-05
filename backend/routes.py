@@ -149,3 +149,24 @@ def get_incidents():
         })
 
     return incidents
+
+from fastapi import APIRouter
+
+router = APIRouter()
+
+@router.get("/alerts")
+def get_alerts():
+    return [
+        {
+            "id": 1,
+            "type": "flood",
+            "location": "Mumbai",
+            "severity": "high"
+        },
+        {
+            "id": 2,
+            "type": "earthquake",
+            "location": "Delhi",
+            "severity": "medium"
+        }
+    ]
