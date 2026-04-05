@@ -1,11 +1,13 @@
 from fastapi import FastAPI
 from backend.routes import router
+app.include_router(router)
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="RescueLens API",
     version="1.0.0"
 )
+
 
 # ✅ CORS FIX
 
