@@ -9,13 +9,23 @@ body {
 .header {
   text-align: center;
   padding: 20px;
+  position: relative;
+  padding: 10px 20px 20px;
 }
 
 .brand {
   font-family: Orbitron;
-  font-size: 40px;
+  font-size: 30px;
+  position: top 10px;
+  margin: 20px 0px 12px
 }
 
+.subbrand {
+  color: green;
+  margin: 3.77px 0px 12px;
+  font-size: 14px;
+  line-height: 1;
+}
 .status-bar {
   color: #00ffcc;
   font-size: 14px;
@@ -33,6 +43,7 @@ body {
 .mode-btn {
   padding: 8px 16px;
   border-radius: 20px;
+  justify-content: 100px;
   border: none;
   background: #58139d;
   color: white;
@@ -45,12 +56,12 @@ body {
 }
 
 /* STATS */
-.stats {
+/* .stats {
   display: flex;
   justify-content: center;
   gap: 30px;
   margin: 10px 0;
-}
+} */
 
 .timestamp {
   font-size: 12px;
