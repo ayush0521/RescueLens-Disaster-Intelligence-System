@@ -1,139 +1,45 @@
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: Inter, sans-serif;
-  background: #050b16;
+  background: #0b1c2c;
   color: white;
 }
 
-/* HEADER */
-.header {
+header {
   text-align: center;
   padding: 20px;
-  position: relative;
-  padding: 10px 20px 20px;
+  background: #07121f;
 }
 
-.brand {
-  font-family: Orbitron;
-  font-size: 30px;
-  position: top 10px;
-  margin: 20px 0px 12px
+h1 {
+  margin: 0;
 }
 
-.subbrand {
-  color: green;
-  margin: 3.77px 0px 12px;
-  font-size: 14px;
-  line-height: 1;
-}
-.status-bar {
-  color: #00ffcc;
-  font-size: 14px;
-  margin: 5px 0;
-}
-
-.legend {
+.stats {
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  font-size: 14px;
-}
-
-/* BUTTON */
-.mode-btn {
-  padding: 8px 16px;
-  border-radius: 20px;
-  justify-content: 100px;
-  border: none;
-  background: #58139d;
-  color: white;
-  cursor: pointer;
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0.5; }
-}
-
-/* STATS */
-/* .stats {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 10px 0;
-} */
-
-.timestamp {
-  font-size: 12px;
-  color: #aaa;
-}
-
-/* LAYOUT */
-.container {
-  display: flex;
-  height: 75vh;
-  padding: 20px;
-  gap: 20px;
-}
-
-/* ALERT PANEL */
-.alerts-panel {
-  width: 40%;
-  background: #0c1524;
+  justify-content: space-around;
   padding: 15px;
-  border-radius: 10px;
-  overflow-y: auto;
-}
-
-.alert-item {
-  background: #111c30;
-  padding: 12px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.alert-item:hover {
-  background: #162540;
-}
-
-.tag {
-  float: right;
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-size: 12px;
-}
-
-.high { background: red; }
-.medium { background: orange; }
-.low { background: gray; }
-
-/* MAP */
-.map-panel {
-  width: 60%;
-  background: #0c1524;
-  padding: 15px;
-  border-radius: 10px;
-}
-
-#map {
-  height: 100%;
-  border-radius: 10px;
-}
-
-/* NOTIFICATION */
-.notification-panel {
+  background: #102a43;
   margin: 10px;
-  padding: 10px;
-  width: 600px;
-  background: #111;
-  border-radius: 5px;
-}
-.alert-card {
-  background: #0f172a;
-  border: 1px solid #334155;
-  padding: 10px;
-  margin-bottom: 10px;
   border-radius: 10px;
-  color: white;
+}
+
+section {
+  padding: 20px;
+}
+
+#alerts-container {
+  display: grid;
+  gap: 15px;
+}
+
+.alert-card {
+  background: #102a43;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid red;
+}
+
+.alert-card h3 {
+  margin: 0 0 10px;
 }
