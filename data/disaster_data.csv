@@ -1,1 +1,24 @@
+id,text,city,disaster_type,source,timestamp
+1,"Severe flooding reported in Kurla Mumbai after heavy rainfall",Mumbai,Flood,Twitter,2026-04-05 22:11:23
+2,"Fire broke out in a residential building in Andheri Mumbai late night",Mumbai,Fire,News,2026-04-05 21:54:10
+3,"Multi-vehicle accident reported near Bandra Mumbai highway causing congestion",Mumbai,Accident,Twitter,2026-04-05 20:42:55
+4,"Waterlogging issues observed in Dadar Mumbai streets disrupting traffic flow",Mumbai,Flood,Facebook,2026-04-04 18:22:14
+5,"Mild tremors felt near Thane Mumbai region early morning hours",Mumbai,Earthquake,News,2025-03-10 09:03:45
 
+6,"Heavy rainfall submerged roads in Kothrud Pune affecting commuters badly",Pune,Flood,Twitter,2026-04-05 22:02:11
+7,"Fire incident reported in Hinjewadi Pune IT park building, emergency teams rushed",Pune,Fire,News,2026-04-05 21:31:49
+8,"Major accident occurred at Wakad Pune junction causing long traffic delays",Pune,Accident,Twitter,2026-04-05 20:12:36
+9,"Flood-like conditions observed in Hadapsar Pune after continuous rainfall",Pune,Flood,Facebook,2026-04-04 17:01:55
+10,"Light tremors recorded near shivaji nagar Pune region during afternoon",Pune,Earthquake,News,2025-02-15 11:33:20
+
+11,"Massive fire broke out in karol bagh Delhi market area spreading rapidly",Delhi,Fire,Twitter,2026-04-05 22:06:41
+12,"Bus accident reported in dwarka Delhi sector causing injuries to passengers",Delhi,Accident,News,2026-04-05 21:22:08
+13,"Earthquake tremors felt in rohini Delhi residential area, people rushed outside",Delhi,Earthquake,Twitter,2026-04-05 20:51:33
+14,"Waterlogging reported in lajpat nagar Delhi streets after heavy rainfall",Delhi,Flood,Facebook,2026-04-04 19:12:27
+15,"Short circuit caused fire in saket Delhi apartment building late evening",Delhi,Fire,News,2025-01-12 14:05:09
+
+16,"Severe waterlogging observed in velachery Chennai region after continuous rain",Chennai,Flood,Twitter,2026-04-05 22:16:52
+17,"Fire accident reported in anna nagar Chennai warehouse, firefighters on site",Chennai,Fire,News,2026-04-05 21:42:18
+18,"Road accident near tambaram Chennai highway causing heavy traffic congestion",Chennai,Accident,Twitter,2026-04-05 20:27:44
+19,"Flood conditions affecting adyar Chennai residential areas and nearby roads",Chennai,Flood,Facebook,2026-04-04 16:53:39
+20,"Mild tremors detected near t nagar Chennai locality early morning",Chennai,Earthquake,News,2025-03-22 08:34:12

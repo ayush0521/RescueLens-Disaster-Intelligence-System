@@ -1,1 +1,120 @@
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #050b16;
+  color: white;
+}
 
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+.brand {
+  font-family: Orbitron;
+  font-size: 40px;
+}
+
+.status-bar {
+  color: #00ffcc;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 14px;
+}
+
+/* BUTTON */
+.mode-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #58139d;
+  color: white;
+  cursor: pointer;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.5; }
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 10px 0;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  height: 75vh;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* ALERT PANEL */
+.alerts-panel {
+  width: 40%;
+  background: #0c1524;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+.alert-item {
+  background: #111c30;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.alert-item:hover {
+  background: #162540;
+}
+
+.tag {
+  float: right;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.high { background: red; }
+.medium { background: orange; }
+.low { background: gray; }
+
+/* MAP */
+.map-panel {
+  width: 60%;
+  background: #0c1524;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#map {
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* NOTIFICATION */
+.notification-panel {
+  margin: 10px;
+  padding: 10px;
+  width: 600px;
+  background: #111;
+  border-radius: 5px;
+}
