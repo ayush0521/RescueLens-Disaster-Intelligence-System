@@ -44,7 +44,7 @@ async function fetchAlerts() {
   try {
     alertsList.innerHTML = "⏳ Fetching live alerts...";
 
-    const res = await fetch("https://rescuelens-disaster-intelligence-system-1-lblq.onrender.com");
+    const res = await fetch("https://rescue-lens-disaster-intelligence-system-1-lblq.onrender.com/alerts");
     const data = await res.json();
 
     alerts = data.map((a) => {
