@@ -1,75 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RescueLens</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
-
-  <!-- Leaflet -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-<div id="alerts-container"></div>
-  <!-- HEADER -->
-  <header class="header">
-    <h1 class="brand">RescueLens</h1>
-    <h5 class="subbrand">System Active • Real-Time Monitoring</h5>
-    <button id="modeToggle" class="mode-btn">🔴 LIVE MODE</button>
-    <div class="status-bar">
-      <span class="live-dot"></span>
-    </div>
 
-    <!-- <button id="modeToggle" class="mode-btn">🔴 LIVE MODE</button> -->
-
-    <div class="stats">
-      <div>🚨 Alerts: <span id="alertCount">0</span></div>
-      <div>📍 Cities: <span id="cityCount">0</span></div>
-      <div>⚠️ High Risk: <span id="riskCount">0</span></div>
-    </div>
-
-    <p class="timestamp">Last updated: <span id="time"></span></p>
-
-    <div class="legend">
-      <span style="color:white">🔵 Flood</span>
-      <span style="color:white">🟣 Earthquake</span>
-      <span style="color:white">🟠 Fire</span>
-      <span style="color:white">🔴 Fire</span>
-      <span style="color:grey">⚪ Older Post</span>
-    </div>
+  <header>
+    <h1>🚨 RescueLens</h1>
+    <p>Real-Time Disaster Monitoring</p>
   </header>
 
-  <!-- MAIN -->
-  <main class="container">
+  <main>
 
-    <!-- ALERT LIST -->
-    <section class="alerts-panel">
-      <h2>🚨 Alerts</h2>
-      <div id="alertsList"></div>
+    <!-- LIVE STATS -->
+    <section class="stats">
+      <div>Alerts: <span id="alert-count">0</span></div>
+      <div>Cities: <span id="city-count">0</span></div>
+      <div>High Risk: <span id="high-risk">0</span></div>
     </section>
 
-    <!-- MAP -->
-    <section class="map-panel">
-      <h2>🗺️ Disaster Map</h2>
-      <div id="map"></div>
+    <!-- ALERTS -->
+    <section>
+      <h2>🚨 Alerts</h2>
+      <div id="alerts-container">
+        Loading alerts...
+      </div>
     </section>
 
   </main>
 
-  <!-- NOTIFICATION PANEL -->
-  <section class="notification-panel">
-    <h3>📩 Alert Notification</h3>
-    <div id="notificationBox">No alerts triggered</div>
-  </section>
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="script.js"></script>
-
 </body>
 </html>
