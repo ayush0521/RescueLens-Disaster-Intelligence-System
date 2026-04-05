@@ -2,154 +2,223 @@
 <h3 align="center">AI-Powered Real-Time Disaster Intelligence System</h3>
 
 <p align="center">
-Transforming social media signals into actionable disaster alerts for faster emergency response.
+  Turning chaotic social media signals into structured, actionable intelligence for faster emergency response.
 </p>
 
-<hr>
-
-<h2>📌 Problem Statement</h2>
-<p>
-During disasters, critical information appears on social media before official reports.
-However, this data remains unusable due to noise, misinformation, and lack of real-time processing systems.
+<p align="center">
+  <img src="https://img.shields.io/badge/Backend-FastAPI-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Frontend-JavaScript-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Map-Leaflet-orange?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Status-Demo%20Ready-success?style=for-the-badge">
 </p>
 
-<p>
-<strong>Core Gap:</strong> No system exists to convert unstructured social media data into reliable, prioritized intelligence for rescue teams.
-</p>
+---
 
-<hr>
+## 📌 Problem Statement
 
-<h2>💡 Solution Overview</h2>
-<p>
-<strong>RescueLens</strong> is an AI-powered system that processes social-media-like data streams in real time,
-detects disaster events, assigns severity and credibility scores, and prioritizes alerts for effective decision-making.
-</p>
+During disasters, **critical information appears on social media before official reports**.
 
-<ul>
-<li>Real-time event detection using NLP</li>
-<li>Severity & Credibility scoring system</li>
-<li>Smart alert prioritization engine</li>
-<li>Geo-based hotspot detection</li>
-<li>False alarm suppression mechanism</li>
-</ul>
+However:
+- Data is **unstructured and noisy**
+- Contains **misinformation and outdated content**
+- Lacks **real-time filtering and prioritization**
 
-<hr>
+> ⚠️ **Core Gap:**  
+No system converts raw social signals into **trusted, prioritized, and location-aware intelligence**.
 
-<h2>⚙️ System Architecture</h2>
+---
 
-<pre>
+## 💡 Solution Overview
+
+**RescueLens** is an AI-powered disaster intelligence system that:
+
+- ⚡ Detects disaster events in real time  
+- 📊 Assigns **authenticity (confidence) scores**  
+- 🕒 Filters outdated signals  
+- 🧠 Explains *why* each alert was generated  
+- 📍 Visualizes alerts on an interactive map  
+
+> 🎯 Goal: Enable faster, smarter, and more reliable emergency response.
+
+---
+
+## ⚙️ System Architecture
 Simulated Data Stream
-        ↓
+↓
 NLP Detection Engine
-        ↓
-Scoring Engine (Severity + Credibility)
-        ↓
-Smart Alert Engine (Prioritization)
-        ↓
-Backend API (Flask)
-        ↓
-Frontend Dashboard (React + Map)
-</pre>
+↓
+Intelligence Layer
+(Recency + Authenticity + Explanation)
+↓
+Smart Alert Engine
+↓
+Backend API (FastAPI)
+↓
+Frontend Dashboard (JS + Leaflet)
 
-<hr>
 
-<h2>🧱 Core Modules</h2>
+---
 
-<ul>
-<li><strong>Data Ingestion Layer:</strong> Handles incoming data stream</li>
-<li><strong>NLP Detection Engine:</strong> Identifies disaster type</li>
-<li><strong>Scoring Engine:</strong> Computes severity & credibility</li>
-<li><strong>Smart Alert Engine:</strong> Prioritizes critical alerts</li>
-<li><strong>Backend API:</strong> Connects system components</li>
-<li><strong>Frontend Dashboard:</strong> Visualizes alerts and hotspots</li>
-</ul>
+## 🧠 Core Intelligence Features
 
-<hr>
+### 🔍 Disaster Detection
+- Keyword-based NLP engine  
+- Supports: Flood, Fire, Earthquake, Accident  
 
-<h2>⚙️ Tech Stack</h2>
+---
 
-<ul>
-<li><strong>Frontend:</strong> React + Leaflet.js</li>
-<li><strong>Backend:</strong> Flask (Python)</li>
-<li><strong>ML/NLP:</strong> Python (sklearn + keyword logic)</li>
-<li><strong>Data:</strong> JSON (simulated real-time stream)</li>
-</ul>
+### 🕒 Temporal Filtering
+- Distinguishes **recent vs outdated alerts**
+- Prevents false signals from old data  
 
-<hr>
-<h2>📁 Project Structure</h2>
+---
 
-<pre>
+### 📊 Authenticity Scoring
+Each alert is evaluated using:
+- Recency (time relevance)  
+- Source credibility (News, Twitter, etc.)  
+- Location specificity (area vs city)  
+
+> Example: `Score = 0.8 → High Confidence`
+
+---
+
+### 🧠 Explanation Layer *(Key Differentiator)*
+Each alert explains its reasoning:
+Detected due to: recent activity + area match + disaster keywords
+
+
+---
+
+### 📍 Smart Geo-Mapping
+- Area-level extraction from text  
+- City-level fallback  
+- Cluster simulation using coordinate spread  
+
+---
+
+## 🚀 Features
+
+- ⚡ Real-time disaster monitoring  
+- 📍 Interactive map visualization  
+- 🎨 Multi-disaster color coding  
+- 🕒 Recency-based fading (old vs live)  
+- 📊 Authenticity scoring system  
+- 🧠 Explainable alerts  
+- 📩 Simulated notification system  
+
+---
+
+## 🧱 Core Modules
+
+| Module | Description |
+|------|------------|
+| Data Loader | Handles dataset ingestion |
+| NLP Engine | Detects disaster type |
+| Authenticity Engine | Scores reliability |
+| Explanation Engine | Generates reasoning |
+| API Layer | Backend communication |
+| Frontend Dashboard | Visualizes alerts |
+
+---
+
+## ⚙️ Tech Stack
+
+| Layer | Technology |
+|------|-----------|
+| Frontend | HTML, CSS, JavaScript, Leaflet.js |
+| Backend | FastAPI (Python) |
+| NLP | Rule-based keyword detection |
+| Data | CSV (simulated real-time feed) |
+
+---
+
+## 📁 Project Structure
 RescueLens/
 │
-├── backend/              # Flask backend API
-│   ├── app.py
-│   ├── routes/
-│   └── utils/
+├── backend/
+│ ├── main.py
+│ ├── routes.py
+│ ├── services/
+│ └── utils/
 │
-├── ml/                   # ML & scoring logic
-│   ├── model.py
-│   ├── scoring.py
-│   └── preprocessing.py
+├── frontend/
+│ ├── index.html
+│ ├── style.css
+│ └── script.js
 │
-├── frontend/             # React frontend
-│   ├── src/
-│   └── public/
+├── data/
+│ └── disaster_data.csv
 │
-├── data/                 # Sample dataset
-│   └── sample_data.json
-│
-├── docs/                 # Documentation
-│   └── architecture.md
+├── docs/
+│ └── architecture.md
 │
 ├── README.md
 ├── requirements.txt
 └── LICENSE
-</pre>
-<hr>
-<h2>🚀 Features</h2>
 
-<ul>
-<li>Real-time disaster detection</li>
-<li>Severity & credibility scoring</li>
-<li>Smart alert prioritization</li>
-<li>Location-based clustering</li>
-<li>Interactive dashboard visualization</li>
-</ul>
 
-<hr>
+---
 
-<h2>📊 Expected Output</h2>
+## 📊 Output
 
-<ul>
-<li>🔴 High-priority alerts</li>
-<li>📍 Geo-based disaster hotspots</li>
-<li>📊 Severity & credibility indicators</li>
-<li>📡 Real-time event feed</li>
-</ul>
+- 🔴 High-confidence alerts  
+- ⚪ Faded outdated signals  
+- 📍 Geo-based disaster hotspots  
+- 🧠 Explanation-backed decisions  
+- 📡 Real-time alert feed  
 
-<hr>
+---
 
-<h2>👥 Team</h2>
+## 🖥️ Demo Preview *(Add Screenshots Here)*
 
-<ul>
-<li><strong>AI/ML:</strong> Ayush</li>
-<li><strong>Backend:</strong> Pramit</li>
-<li><strong>Frontend:</strong> Achal</li>
-<li><strong>Documentation & Presentation:</strong> Shravni</li>
-</ul>
-
-<hr>
-
-<h2>🏆 Impact</h2>
-
-<p>
-RescueLens enables faster response, improved situational awareness, and better resource allocation during disasters.
+<p align="center">
+  <img src="docs/demo1.png" width="45%">
+  <img src="docs/demo2.png" width="45%">
 </p>
 
-<hr>
+---
 
-<h2>📜 License</h2>
+## 👥 Team
 
-<p>
-This project is licensed under the MIT License.
+| Role | Name |
+|------|------|
+| AI / ML | Ayush |
+| Backend | Pramit |
+| Frontend | Achal |
+| Documentation | Shravni |
+
+---
+
+## 🏆 Impact
+
+RescueLens enables:
+
+- 🚑 Faster emergency response  
+- 📡 Improved situational awareness  
+- 📊 Better decision-making  
+- ⚠️ Reduced misinformation impact  
+
+> **Turning raw data into life-saving intelligence.**
+
+---
+
+## 🚀 Future Enhancements
+
+- Live Twitter/X API integration  
+- Advanced NLP models (BERT / Transformers)  
+- Multi-source data aggregation  
+- SMS / Email alert system  
+- Admin control panel  
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+<p align="center">
+  ⭐ If you like this project, consider starring the repository!
 </p>
